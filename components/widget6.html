@@ -1,0 +1,23 @@
+
+
+<div class="card box-shadow no-padding color-4 no-border" ng-controller="jokeCtrl">		
+					<div class="card-header color-1">Random Jokes</div>
+					<div class="card-body color-4 card-body-modify" style="height: 200px">
+						<div class="inputFields">
+							<div class="row">
+								<div class="form-group col">
+									<input type="text" placeholder="First Name" class="form-control" ng-model="firstName" required="true">
+								</div>
+								<div class="form-group col">
+									<input type="text" placeholder="Last Name" class="form-control" ng-model="lastName" required="true">
+								</div>
+							</div>
+						</div>
+						
+						<button class="btn form-group color-1" ng-click="getJoke()">Get Joke</button>
+						<button class="btn form-group color-1 less" ng-click="more()">More</button>
+						<button class="btn form-group color-1 clear" ng-click="clear()">Clear</button>
+						<p><small class="bodyText">Get any number of random joke anytime anywhere. If you want, you can get a more personalized joke by clicking on more.</small></p>
+					</div>
+					<div class="card-footer color-1 text-muted"><small>Source: <a href="https://icndb.com" class="golden-hyperlink">ICNDb.com</a></small></div>
+				</div>

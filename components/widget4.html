@@ -1,0 +1,24 @@
+
+
+	<div class="card no-border no-padding box-shadow" ng-controller="apiCtrl">
+		<div class="card-header color-1">Api Response Mapper</div>
+		<div class="card-body card-body-modify color-4">
+			<form class="form-group">
+				<div class="form">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Enter api request" ng-model="request" required="true">
+					</div>
+					<div class="form-group">
+						<button class="btn color-1" ng-click="mapApi()">Submit</button>
+						<div class="btn color-1 clear1" ng-click="clear()">Clear</div>
+					</div>
+				</div>				
+			</form>
+
+		<div class="widget1body">
+			<small><br>Map your api response easily without looking into browser's console.<br><br>Paste your api request above. <br><br>Do not use api's which return multimedia data.</small>
+		</div>
+
+		</div>
+		<div class="card-footer color-1 text-muted"><small>For development purposes only</small></div>
+	</div>

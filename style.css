@@ -1,0 +1,195 @@
+
+
+html, body {
+	background: rgb(243,243,234);
+}		
+
+		.weather-heading {
+			font-family: 'PT Sans', sans-serif;
+			font-size: 30px;
+			font-kerning: normal;
+			font-weight: lighter;
+			margin-top: -30px;
+		}
+
+		.tempCity {
+			font-size: 20px;
+		}
+
+		.base {
+			margin-top: 60px;
+		}
+
+		.box-shadow {
+			box-shadow: 0px 0px 50px rgb(203, 208, 216);
+			/*Changes the widget color*/
+			/*background: white;*/
+		}
+
+		.no-border-radius {
+			border-radius: 0;
+		}
+
+		.normalise-padding {
+			padding: 20px 40px 40px 40px;
+		}
+
+		.no-padding {
+			padding: 0;
+		}
+		
+		.clicker:hover {
+			cursor: pointer;
+		}
+
+		.panel-extra {
+			/*height: 0%;*/
+			display: none;
+			transition: display 2s;
+		}
+
+		.nav-text {
+			
+			color: rgba(0,0,0,.5);
+			text-transform: uppercase;
+			font-size: smaller;
+			font-stretch: 20%;
+		}
+
+		.nav-text:hover {
+			color: rgba(0,0,0,.8);
+		}
+
+		.color-2 {
+			background: rgb(210, 171, 42);
+			color: rgb(243,243,234);
+		}
+
+		.color-1 {
+			background: rgb(50,61,81);
+			color: rgb(243,243,234);
+		}
+
+		.color-3 {
+			background: rgb(203, 208, 216);
+			color: white;
+		}
+
+		.color-4 {
+			background: rgb(243,243,234);
+			/*color: rgb(243,243,234);*/
+		}
+
+		.color-5 {
+			background: rgb(132, 153, 39);
+		}
+
+		.color-6 {
+			background: rgb(206, 92, 47);
+		}
+
+		.no-border {
+			border: none;
+		}
+
+		.golden-hyperlink {
+			color: unset;
+		}
+
+		.golden-hyperlink:hover {
+			text-decoration: none;
+			color: rgb(210, 171, 42);
+		}
+
+		.no-margin-bottom {
+			margin-bottom: 0;
+			padding-bottom: 20px;
+		}
+
+		.title {
+			letter-spacing: 15px;
+			text-align: center;
+		}
+
+		.shift-1 {
+			margin-top: 5px;
+		}
+
+		.shift-2 {
+			margin: 0 5px;
+		}
+
+		.shift-3 {
+			margin: 0 10px;
+		}
+
+		.shift-4 {
+			margin: 0 15px;
+		}
+
+		.shift-5 {
+			margin: 0 20px;
+		}
+
+		.shift-6 {
+			margin: 0 25px;
+		}
+
+		.no-border-radius {
+			border-radius: 0px;
+		}
+
+		.card-body-modify {
+			overflow-y: scroll;
+		    height: 300px;
+		}
+
+		.card-body::-webkit-scrollbar {
+		    width: 0.25em;
+		}
+		 
+		.card-body::-webkit-scrollbar-track {
+		    display: none;
+		}
+		 
+		.card-body::-webkit-scrollbar-thumb {
+		  background-color: darkgrey;
+		  outline: none;
+		}
+
+		.small-text {
+			font-size: 14px;
+		}
+
+		.image-placeholder {
+			visibility: hidden;
+		}
+
+		.footer-text {
+			letter-spacing: 10px;
+			text-align: center;
+		}
+
+		.inputFields, .clear, .clear1 {
+			display: none;
+		}
+
+@media (max-width: 991px) {
+	.picture-frame {
+		height: auto;
+	}
+}
+
+@media (min-width: 991px) {
+	.picture-frame {
+		padding: 0;
+	}
+}
+
+@media (min-width: 1201px) {
+	
+	.picture-frame {
+		height: 300px;
+		overflow-y: hidden;
+	}
+}

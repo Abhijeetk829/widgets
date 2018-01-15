@@ -1,0 +1,10 @@
+{
+  "appId": "widgets",
+  "apiKey": "180b4ed441b97327a1f3b23f91aa0e41c2865f78c4b8332b8de458b0527518fe",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

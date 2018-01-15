@@ -1,0 +1,58 @@
+<!-- Tiny weather report widget -->
+
+		<!-- Actual widget -->
+			<div class="card no-padding box-shadow no-border">
+				<div class="card-header color-1">Weather Report</div>
+				<div class="card-body color-4 card-body-modify">
+					<div class="row" style="margin-bottom: -10px">
+						<div class="col-2">
+							<img src={{weatherIcon}} style="margin: -8px -10px 0 -10px;">
+						</div>
+						<div class="col-10">
+							<h4>{{temprature}} °C<small>, {{weatherData.weather[0].main}}</small></h4>
+						</div>
+					</div>
+					<p><small><b>{{weatherData.name}}, {{weatherData.sys.country}} </b>(Lat: {{weatherData.coord.lat}}, Lon: {{weatherData.coord.lon}})</small></p>
+					<form>
+						<div class="form-group">
+							<input type="text" placeholder="Enter a city" class="form-control" ng-model="city" required="true">
+						</div>
+						<div class="form-group">
+							<button ng-click="weatherQuery(city, 'true')" class="btn color-1">Submit</button>
+							<div class="btn color-1 clicker" ng-click="more()">More</div>
+						</div>		
+					</form>
+
+					<div class="temp-text">
+						<small>
+							<br>Know the current weather conditions of any place. Just type in the location and you're good to go.
+						</small>
+					</div>
+
+					<div class="panel-extra">
+						<div class="card no-border">
+							<div style="height: auto;" class="card-body color-4">
+								Wind Speed : {{weatherData.wind.speed}} m/s at {{(weatherData.wind.deg).toFixed(0)}}°<br>
+								Humidity : {{weatherData.main.humidity}} %<br>
+								Pressure : {{weatherData.main.pressure}} mb<br>
+								<div class="dropdown-divider"></div>
+								Sunrise: {{sun.sunrise}} UTC<br>
+								Sunset: {{sun.sunset}} UTC<br>
+								Day Length: {{sun.day_length}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-footer color-1 text-muted"><small>Source : <a href="http://openweathermap.org" target="_blank" class="golden-hyperlink">Openweathermap</a> <a href="http://sunrise-sunset.org" target="_blank" class="golden-hyperlink">Sunrise-sunset</a></small></div>
+			</div>
+
+
+		<!-- Random picture panel -->
+		<!-- <div class="col-12 offset-md-1 col-md-7 offset-xs-1 col-xl-8 no-padding">
+			<div class="card box-shadow no-border">
+				<div class="card-body color-4" style="border-radius: 5px 5px 0 0"><img src="https://source.unsplash.com/random/720x250" class="img-fluid image-placeholder"></div>
+				<div class="card-footer color-1"><a href="https://unsplash.com" class="golden-hyperlink" target="_blank">Unsplash random images</a></div>
+			</div>
+		</div> -->
+
+<!-- End of tiny widget

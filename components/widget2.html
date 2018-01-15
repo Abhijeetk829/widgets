@@ -1,0 +1,58 @@
+
+
+
+<div class="container form-group">
+	<div class="box-shadow normalise-padding color-4">
+		<h1 class="display-4">WEATHER REPORT</h1>
+		<hr class="color-4">
+		<div class="row">
+			<div class="col-md-5 col-lg-4">
+				<p class="display-2">
+					{{temprature}} °C
+					<br>
+					<div class="row">
+						<p class="tempCity col-6">
+							{{weatherData.weather[0].description}}<br>
+							{{weatherData.name}}, {{weatherData.sys.country}}
+						</p>
+						<div class="col-6">
+							<img src="{{weatherIcon}}" class="img-fluid">
+						</div>
+					</div>
+					
+				</p>
+			</div>
+			<div class="col-md-7 col-lg-8">
+				<div class="row">
+					<div class="col-12 col-lg-6">
+						<p>
+							
+							Latitude : {{weatherData.coord.lat}}<br>
+							Longitude : {{weatherData.coord.lon}}<br>
+							Wind Speed : {{weatherData.wind.speed}} m/s at {{(weatherData.wind.deg).toFixed(0)}}°<br>
+							Maximum Temprature : {{(weatherData.main.temp_max - 273.15).toFixed(0)}} °C<br>
+							Minimum Temprature : {{(weatherData.main.temp_min - 273.15).toFixed(0)}} °C<br>
+							Humidity : {{weatherData.main.humidity}} %<br>
+							Pressure : {{weatherData.main.pressure}} mb<br>
+							<!-- Sea Level : {{weatherData.main.sea_level}} m -->
+						</p>
+					</div>
+					<div class="col-12 col-lg-6">
+						Sunrise: {{sun.sunrise}} UTC<br>
+						Sunset: {{sun.sunset}} UTC<br>
+						Day Length: {{sun.day_length}}
+						<div class="dropdown-divider"></div>
+						<form>
+							<div class="form-group">
+								<input type="text" placeholder="Enter a city" class="form-control color-4" ng-model="city" required="true">
+							</div>
+							<div class="form-group">
+								<button ng-click="weatherQuery(city, 'true')" class="btn color-1">Submit</button>
+							</div>		
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
