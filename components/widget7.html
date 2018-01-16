@@ -1,0 +1,30 @@
+
+
+
+<div class="card no-padding no-border box-shadow" ng-controller="qrCtrl">
+	<div class="card-header color-1">QR Code Generator</div>
+	<div class="card-body card-body-modify color-4" style="height: 200px">
+		<div class="row">
+			<div class="col-6 col-sm-6 col-lg-12 form">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Enter the data to be stored" ng-model="data" required="true">
+				</div>
+				<div class="form-group">
+					<input type="radio" name="size" class="qr-size" value="100x100" checked> 100x100<br>
+					<input type="radio" name="size" class="qr-size" value="300x300"> 300x300<br>
+					<input type="radio" name="size" class="qr-size" value="500x500"> 500x500<br> 
+					<input type="radio" name="size" class="qr-size" value="1000x1000"> 1000x1000
+				</div>				
+				<div class="form-group">
+					<button class="btn color-1" ng-click="getqr()">Get QR</button>
+					<div type="clear" class="btn color-1" ng-click="clear()">Reset</div>
+				</div>
+			</div>
+			<div class="qr-data col-6 col-sm-6 col-lg-12 clear2" align="center">
+				
+			</div>
+		</div>
+		
+	</div>
+	<div class="card-footer text-muted color-1"><small>Source: <a href="https://goqr.me" class="golden-hyperlink">goqr.me</a></small></div>
+</div>

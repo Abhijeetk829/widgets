@@ -181,3 +181,25 @@ app.controller('jokeCtrl', function($scope, $http){
 	}
 
 })
+
+app.controller('qrCtrl', function($scope, $http){
+	$scope.data = "";
+	$scope.getqr = function(){
+		if ($scope.data == ""){
+			console.log("Enter some data");
+		}	else	{
+			$(".qr-data").css("display", "inline");
+			var qrSize = $('.qr-size:checked').val();
+			$scope.url = 'https://api.qrserver.com/v1/create-qr-code/?size='+qrSize+'&data='+$scope.data;
+			$(".qr-data").html('<small class="text-muted">Click on the image to save it</small><br><br><a download="custom-filename.jpg" href="'+$scope.url+'" title="ImageName"><img src='+$scope.url+' class="img-fluid" download></a>');
+		}
+		
+	}
+
+	$scope.clear = function(){
+		$(".qr-data").html("");
+		$(".qr-data").css("display", "none");
+		// $(".qr-size").prop("checked", false);
+		$scope.data = "";
+	}
+})
