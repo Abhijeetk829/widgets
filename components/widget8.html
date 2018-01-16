@@ -1,0 +1,21 @@
+
+
+<div class="card no-padding no-border box-shadow" ng-controller="nasaCtrl">
+	<div class="card-header color-1">Astronomy Picture of The Day</div>
+	<div class="card-body color-4">
+		<div class="row">
+			<div class="form-group col-12 col-md-4">
+				<img src="{{apod.url}}" class="img-fluid">
+				<iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+				<p ng-if="apod.copyright" class="form-group"><small>Copyright: {{apod.copyright}}</small></p>
+			</div>
+			<div class="form-group col-12 col-md-8">
+				<h3>{{apod.title}}</h3>
+				<p>{{apod.explanation}}</p>
+			</div>
+		</div>		
+	</div>
+	<div class="card-footer color-1"><small class="text-muted">Source: <a href="https://www.nasa.gov" class="golden-hyperlink">nasa.gov</a></small></div>
+	
+</div>
+ 

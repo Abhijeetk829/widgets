@@ -95,7 +95,7 @@ app.controller('apiCtrl', function($scope, $http){
 			$http.get($scope.request)
 			.then(function(response){
 				objectCtrl(response)
-				$(".widget1body").append(code);
+				$(".widget1body").html(code);
 			}, function(error){
 				$(".widget1body").html(error.status+' : '+error.statusText);
 			});
@@ -203,3 +203,19 @@ app.controller('qrCtrl', function($scope, $http){
 		$scope.data = "";
 	}
 })
+
+app.controller('nasaCtrl', function($scope, $http){
+
+	$http.get('https://api.nasa.gov/planetary/apod?api_key=vk7K4pmgwlyxCl00ye3ftj1q0gxWKDLwKPLoatxV')
+	.then(function(response){
+		$scope.apod = response.data;
+
+		  if(response.data.media_type == "video") {
+		    $("#apod_img_id").css("display", "none"); 
+		    $("#apod_vid_id").attr("src", response.data.url);
+		  }	  else	{
+		    $("#apod_vid_id").css("display", "none"); 
+		    $("#apod_img_id").attr("src", response.data.url);
+		  }
+	})
+});
